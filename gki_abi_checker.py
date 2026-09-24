@@ -43,9 +43,9 @@ def check_defconfig(config_path, json_export=False):
         is_ok = key in configs and configs[key] == val
         report["mandatory"][key] = is_ok
         if is_ok:
-            print(f"  [✓] {key}={val} (GKI ABI Preserved)")
+            print(f"  [OK] {key}={val} (GKI ABI Preserved)")
         else:
-            print(f"  [✗] {key} is missing or not set to {val}! (ABI Breakage / Bootloop Risk)")
+            print(f"  [FAIL] {key} is missing or not set to {val} (ABI Breakage / Bootloop Risk)")
             passed = False
 
     print("\n--- Recommended Performance Configs ---")
@@ -53,7 +53,7 @@ def check_defconfig(config_path, json_export=False):
         is_ok = key in configs and configs[key] == val
         report["recommended"][key] = is_ok
         if is_ok:
-            print(f"  [✓] {key}={val} (Performance Tuned)")
+            print(f"  [OK] {key}={val} (Performance Tuned)")
         else:
             print(f"  [!] {key} not set to {val} (Optional Performance Boost)")
 

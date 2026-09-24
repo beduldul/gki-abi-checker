@@ -4,7 +4,7 @@ A command-line verification utility designed for Android GKI (Google Kernel Imag
 
 ---
 
-## 🛠 Features in v1.1.0
+## Features in v1.1.0
 
 - **GKI Memory Structure Validation**: Checks mandatory flags like `CONFIG_SLUB_DEBUG=y` to prevent `struct page` layout shifts and instant bootloops.
 - **Networking & Scheduler Audit**: Verifies `CONFIG_NET_SCH_FQ` and `CONFIG_TCP_CONG_BBR` configuration.
@@ -13,7 +13,7 @@ A command-line verification utility designed for Android GKI (Google Kernel Imag
 
 ---
 
-## 💻 Usage
+## Usage
 
 ```bash
 python3 gki_abi_checker.py path/to/kernel/.config --json
@@ -21,5 +21,5 @@ python3 gki_abi_checker.py path/to/kernel/.config --json
 
 ---
 
-## 📄 License
+## License
 MIT License
